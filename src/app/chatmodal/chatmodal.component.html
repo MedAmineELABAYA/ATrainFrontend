@@ -11,15 +11,21 @@
     </button>
   </div>
   <div id="ChatBody" class="modal-body">
-    <div class="MessageA">
-      <label class="Message">Some text</label>
-    </div>
-    <div class="MessageB">
-      <label class="Message">Some text</label>
+    <div *ngFor="let msg of chat">
+      <div *ngIf="msg.user ==='bot' else User" class="MessageA">
+        <label class="Message">{{msg.content}}</label>
+      </div>
+      <ng-template #User>
+        <div class="MessageB">
+          <label class="Message">{{msg.content}}</label>
+        </div>
+      </ng-template>
     </div>
   </div>
   <div id="ChatControl" class="modal-footer">
-    <input class="MessageInput" matInput>
-    <button class="SendButton" mat-button><mat-icon>send</mat-icon></button>
+    <input class="MessageInput" matInput (keyup.enter)="sendMessage(msg)" #msg>
+    <button class="SendButton" mat-button (click)="sendMessage(msg)"  >
+      <mat-icon>send</mat-icon>
+    </button>
   </div>
 </ng-template>

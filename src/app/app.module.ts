@@ -14,6 +14,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {MatCardModule} from "@angular/material/card";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatCardModule} from "@angular/material/card";
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
