@@ -1,0 +1,25 @@
+<button class="MessageButton" mat-button type="button" (click)="openModal(template)">
+  <mat-icon class="MessageButtonIcon">message</mat-icon>
+</button>
+
+<ng-template #template>
+
+  <div id="ChatHeader" class="modal-header">
+    <img class="ChatLogo" src="assets/images/Logo1.png" alt="">
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div id="ChatBody" class="modal-body">
+    <div class="MessageA">
+      <label class="Message">Some text</label>
+    </div>
+    <div class="MessageB">
+      <label class="Message">Some text</label>
+    </div>
+  </div>
+  <div id="ChatControl" class="modal-footer">
+    <input class="MessageInput" matInput>
+    <button class="SendButton" mat-button><mat-icon>send</mat-icon></button>
+  </div>
+</ng-template>

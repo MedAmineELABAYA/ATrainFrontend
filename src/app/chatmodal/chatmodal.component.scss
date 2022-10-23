@@ -1,0 +1,81 @@
+.MessageButton{
+  position: absolute;
+  left: 90%;
+  top: 90%;
+  z-index: 2;
+  background:none;
+  color: #FFC300;
+}
+
+#ChatHeader{
+  display: flex;
+  height:10vh;
+}
+.ChatLogo{
+  margin:auto;
+  height: 5vh;
+}
+.MessageA, .MessageB{
+  display: flex;
+  width:70%;
+  border-radius:20px;
+  border-style: solid;
+  border-color: #868686;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.MessageA{
+  min-height: 4vh;
+  border-top-left-radius: 0;
+  margin-left: 5%;
+  background:#FFC300;
+}
+.MessageB{
+  min-height: 4vh;
+  border-top-right-radius: 0;
+  margin-left: 25%;
+  background: #003566;
+  color: #ffffff;
+}
+.Message{
+  margin: auto;
+}
+
+#ChatBody {
+  padding: 1%;
+  height: calc(65vh - 40px);
+  overflow-y: scroll;
+}
+
+#ChatBody::-webkit-scrollbar {
+  width: 0;
+}
+
+#ChatControl{
+  display: grid;
+  grid-template-columns: 85% 15%;
+  height: 10vh;
+  align-items: center;
+}
+.MessageInput{
+  height:6vh;
+  border-radius:10px;
+  border-style: solid;
+}
+.SendButton{
+  color: #003566;
+  border:None;
+  height: 6vh;
+}
+.SendButton:active{
+  color: #FFC300;
+  border:None;
+  height: 6vh;
+}
+.SendButton:hover{
+  color: #087c00;
+  border:None;
+  height: 6vh;
+}
+
+
