@@ -1,0 +1,81 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0px 8px 8px 0px #00000040;
+}
+
+.toolbar .LogoNav {
+  margin: 0 16px;
+}
+
+.toolbar .RegisterNav {
+  aspect-ratio: 4/1;
+  height: 40px;
+  margin: 0 8px;
+  color: #003566;
+  background: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#003566;
+
+}
+
+.toolbar .LogInNav {
+  aspect-ratio: 4/1;
+  height: 40px;
+  margin: 0 16px;
+  color: white;
+  background: #003566;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+}
+
+.NavAcc{
+  width: auto;
+  display: flex;
+  height: 60px;
+  margin: 0 8px;
+  color: #003566;
+  margin: 0 8px;
+
+}
+.NavName {
+  height: auto;
+  width: auto;
+  font-size:25px ;
+  color: #003566;
+  margin: auto;
+
+}
+
+.NavAvatar {
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  height: 40px;
+  border-radius: 100%;
+  background: #003566;
+  color: white;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  margin: auto;
+  horiz-align: center;
+  vertical-align: middle;
+  margin-left:8px;
+}
