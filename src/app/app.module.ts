@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatmodalComponent } from './chatmodal/chatmodal.component';
@@ -11,18 +10,16 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {NavbarComponent} from "./navbar/navbar.component";
 import {MatMenuModule} from "@angular/material/menu";
-import {LoginComponent} from "./login/login.component";
-import {RegisterComponent} from "./register/register.component";
 import {MatCardModule} from "@angular/material/card";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {AlertModule} from "ngx-bootstrap/alert";
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatmodalComponent,
     NavbarComponent,
-    LoginComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +31,11 @@ import {FormsModule} from "@angular/forms";
     MatInputModule,
     MatMenuModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AlertModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

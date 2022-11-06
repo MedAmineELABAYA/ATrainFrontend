@@ -39,6 +39,8 @@
 }
 .Message{
   margin: auto;
+  white-space: pre-wrap;
+
 }
 
 #ChatBody {
@@ -61,6 +63,7 @@
   height:6vh;
   border-radius:10px;
   border-style: solid;
+  pointer-events: var(--pointer);
 }
 .SendButton{
   color: #003566;

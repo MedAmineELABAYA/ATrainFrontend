@@ -10,7 +10,7 @@
       <span aria-hidden="true" class="visually-hidden">&times;</span>
     </button>
   </div>
-  <div id="ChatBody" class="modal-body">
+  <div #scrollDiv id="ChatBody" class="modal-body">
     <div *ngFor="let msg of chat">
       <div *ngIf="msg.user ==='bot' else User" class="MessageA">
         <label class="Message">{{msg.content}}</label>
