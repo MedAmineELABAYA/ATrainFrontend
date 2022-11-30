@@ -36,6 +36,7 @@ export class ChatmodalComponent implements OnInit {
   ngOnInit(): void {
     document.body.style.setProperty('--pointer', "auto");
 
+
   }
 
   async translate(msg:string) {
