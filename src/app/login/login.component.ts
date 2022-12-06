@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "../services/login.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   alertText:string="";
   alertState:boolean = true
   alertStyle :any =""
-  constructor() { }
+  constructor(private loginservice:LoginService) { }
 
   ngOnInit(): void {
     document.title="Log In"
@@ -51,8 +52,14 @@ export class LoginComponent implements OnInit {
           this.setAlert("red")
         }
         else {
-          this.alertText = "wow good"
-          this.setAlert("green")
+          this.loginservice.getUser(email,pwd).subscribe(
+            res=>{
+              console.log(res)
+              this.alertText = "wow good"
+              this.setAlert("green")
+            }
+          )
+
         }
       }
     }
