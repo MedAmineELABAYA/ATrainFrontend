@@ -1,0 +1,27 @@
+<div class="LogIn">
+  <mat-card class="LogInCard">
+    <mat-card-header class="LogInHeader">
+      <mat-label class="LogInTitle">Log In</mat-label>
+    </mat-card-header>
+    <mat-card-content class="LogInContent">
+      <form class="LogInForm">
+        <mat-form-field class="LogInFormFields">
+          <mat-label>Email</mat-label>
+          <input  matInput  placeholder="Email" name="email" #email required>
+        </mat-form-field>
+        <mat-form-field class="LogInFormFields" >
+          <mat-label>Password</mat-label>
+          <input  matInput type="password" placeholder="Password" name="password" #password required>
+        </mat-form-field>
+        <mat-label [ngStyle]="alertStyle" [hidden]="alertState" >{{alertText}}</mat-label>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="LogInActions">
+      <button mat-raised-button class="LogInButton" (click)="login(email.value,password.value)" >Log In</button>
+    </mat-card-actions>
+    <mat-card-footer class="LogInFooter">
+      <mat-label class="LogInSignUpText">you don't have account? <a style="color: #FFC300" routerLink="register">Register</a></mat-label>
+    </mat-card-footer>
+  </mat-card>
+</div>
+

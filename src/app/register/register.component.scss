@@ -1,0 +1,69 @@
+.Register{
+  display: flex;
+  justify-content: center;
+  height: 100Vh;
+}
+.RegisterCard{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: #ffffff;
+  width: 50VW;
+  border-style: solid;
+  border-width: 0.15vh;
+  border-color: #FFC300;
+}
+.RegisterHeader{
+  display: flex;
+  flex-direction: row;
+  color: #0A100D;
+  font-size: x-large;
+  text-align: center;
+  height: 10VH;
+}
+.RegisterTitle{
+  margin: auto;
+  color: #0A100D;
+}
+.RegisterContent{
+  height: available;
+}
+.RegisterForm{
+  width: 100%;
+}
+
+.RegisterFormFields {
+  width: 100%;
+}
+.RegisterActions{
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+.RegisterButton{
+  margin: auto;
+  background:#003566 ;
+  color: #ffffff;
+}
+
+.RegisterFooter{
+  display: flex;
+  height: 10vh;
+}
+.RegisterLogInText{
+  margin: auto;
+  color: #0A100D;
+}
+.RegisterAlert{
+  display: var(--reg-alert);
+  text-align: center;
+  width: 40vw;
+  position:absolute;
+  left: 30vw;
+  top:90vh;
+}
+
+.CollageBackground{
+  z-index: 0;
+}
+

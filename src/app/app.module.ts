@@ -14,12 +14,17 @@ import {MatCardModule} from "@angular/material/card";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AlertModule} from "ngx-bootstrap/alert";
+import { LoginComponent } from './login/login.component';
+import {RegisterComponent} from "./register/register.component";
+import {ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from "@angular/material/core";
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatmodalComponent,
     NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import {AlertModule} from "ngx-bootstrap/alert";
     HttpClientModule,
     AlertModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule,{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
